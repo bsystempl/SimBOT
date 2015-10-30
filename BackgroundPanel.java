@@ -35,8 +35,10 @@ public class BackgroundPanel extends JPanel {
         setPreferredSize(dimension);
 
 
-        g2d.drawImage(image, 0,0, this);
+        g2d.drawImage(image, 0, 0, this);
         g2d.draw(rectangle);
+        g2d.setColor(Color.RED);
+        g2d.drawString("PREALPHA 0.0.0.1 ", 20, 340);
 
     }
 }
