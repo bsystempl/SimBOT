@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.io.File;
 
 public class MyFrame extends JFrame {
     public MyFrame() {
@@ -8,11 +9,15 @@ public class MyFrame extends JFrame {
         JTextField text = new JTextField();
         JButton ok = new JButton();
 
+        File imageFile = new File("logo.jpg");
+        Image image = GenerateImage.toImage(true); //this generates an image file
+        JLabel thumb = new JLabel();
+        thumb.setIcon(image);
         panel.add(text);
         panel.add(ok);
 
         ok.setText("OK");
-        ok.setEnabled(false);
+        ok.setEnabled(true);
         text.setPreferredSize(new Dimension(200, 24));
         add(panel);
 
